@@ -9,9 +9,10 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PetroPocket</RootNamespace>
     <AssemblyName>PetroPocket</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,27 +34,29 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CSkin, Version=16.1.14.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\CSkin 2.0\CSkin.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
-    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +65,17 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="lib\AutoMapper.5.2.0\AutoMapper.5.2.0.nupkg" />
+    <None Include="lib\FluentNHibernate.2.0.3.0\FluentNHibernate.2.0.3.0.nupkg" />
+    <None Include="lib\NHibernate.4.0.4.4000\nhibernate-configuration.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lib\NHibernate.4.0.4.4000\nhibernate-mapping.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lib\NHibernate.4.0.4.4000\NHibernate.4.0.4.4000.nupkg" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +88,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lib\AutoMapper.5.2.0\lib\net45\AutoMapper.dll" />
+    <Content Include="lib\AutoMapper.5.2.0\lib\net45\AutoMapper.xml" />
+    <Content Include="lib\AutoMapper.5.2.0\lib\netstandard1.1\AutoMapper.dll" />
+    <Content Include="lib\AutoMapper.5.2.0\lib\netstandard1.1\AutoMapper.xml" />
+    <Content Include="lib\AutoMapper.5.2.0\lib\netstandard1.3\AutoMapper.dll" />
+    <Content Include="lib\AutoMapper.5.2.0\lib\netstandard1.3\AutoMapper.xml" />
+    <Content Include="lib\CSkin4.0\CSkin.dll" />
+    <Content Include="lib\CSkin4.0\CSkin.XML" />
+    <Content Include="lib\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.dll" />
+    <Content Include="lib\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.pdb" />
+    <Content Include="lib\FluentNHibernate.2.0.3.0\lib\net40\FluentNHibernate.XML" />
+    <Content Include="lib\NHibernate.4.0.4.4000\ConfigurationTemplates\FireBird.cfg.xml" />
+    <Content Include="lib\NHibernate.4.0.4.4000\ConfigurationTemplates\MSSQL.cfg.xml" />
+    <Content Include="lib\NHibernate.4.0.4.4000\ConfigurationTemplates\MySql.cfg.xml" />
+    <Content Include="lib\NHibernate.4.0.4.4000\ConfigurationTemplates\Oracle.cfg.xml" />
+    <Content Include="lib\NHibernate.4.0.4.4000\ConfigurationTemplates\PostgreSQL.cfg.xml" />
+    <Content Include="lib\NHibernate.4.0.4.4000\ConfigurationTemplates\SQLite.cfg.xml" />
+    <Content Include="lib\NHibernate.4.0.4.4000\ConfigurationTemplates\SybaseASE.cfg.xml" />
+    <Content Include="lib\NHibernate.4.0.4.4000\ConfigurationTemplates\SybaseSQLAnywhere.cfg.xml" />
+    <Content Include="lib\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll" />
+    <Content Include="lib\NHibernate.4.0.4.4000\lib\net40\NHibernate.xml" />
+    <Content Include="lib\NHibernate.4.0.4.4000\NHibernate.license.txt" />
+    <Content Include="lib\NHibernate.4.0.4.4000\NHibernate.readme.html" />
+    <Content Include="lib\NHibernate.4.0.4.4000\NHibernate.releasenotes.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
