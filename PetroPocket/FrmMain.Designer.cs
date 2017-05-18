@@ -212,7 +212,7 @@
             this.skinTabPage1.Size = new System.Drawing.Size(158, 419);
             this.skinTabPage1.TabIndex = 0;
             this.skinTabPage1.TabItemImage = null;
-            this.skinTabPage1.Text = "page1";
+            this.skinTabPage1.Text = "page111";
             // 
             // skinTabPage2
             // 
