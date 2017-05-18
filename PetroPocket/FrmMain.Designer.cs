@@ -47,6 +47,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.skinToolStrip1 = new CCWin.SkinControl.SkinToolStrip();
             this.skinTextBox2 = new CCWin.SkinControl.SkinTextBox();
+            this.rtfRichTextBox1 = new CCWin.SkinControl.RtfRichTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.skinTabControl1.SuspendLayout();
@@ -293,11 +294,13 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.rtfRichTextBox1);
             this.panel2.Controls.Add(this.skinTextBox2);
             this.panel2.Controls.Add(this.skinToolStrip1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(203, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(606, 383);
+            this.panel2.Size = new System.Drawing.Size(648, 419);
             this.panel2.TabIndex = 1;
             // 
             // skinToolStrip1
@@ -339,7 +342,7 @@
             this.skinToolStrip1.Location = new System.Drawing.Point(0, 0);
             this.skinToolStrip1.Name = "skinToolStrip1";
             this.skinToolStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinToolStrip1.Size = new System.Drawing.Size(606, 25);
+            this.skinToolStrip1.Size = new System.Drawing.Size(648, 25);
             this.skinToolStrip1.SkinAllColor = true;
             this.skinToolStrip1.TabIndex = 0;
             this.skinToolStrip1.Text = "skinToolStrip1";
@@ -351,17 +354,15 @@
             // skinTextBox2
             // 
             this.skinTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.skinTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinTextBox2.DownBack = null;
             this.skinTextBox2.Icon = null;
             this.skinTextBox2.IconIsButton = false;
             this.skinTextBox2.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.skinTextBox2.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.skinTextBox2.IsPasswordChat = '\0';
             this.skinTextBox2.IsSystemPasswordChar = false;
             this.skinTextBox2.Lines = new string[] {
-        "skinTextBox2"};
-            this.skinTextBox2.Location = new System.Drawing.Point(0, 25);
+        "<br/>skinTextBox2"};
+            this.skinTextBox2.Location = new System.Drawing.Point(50, 95);
             this.skinTextBox2.Margin = new System.Windows.Forms.Padding(0);
             this.skinTextBox2.MaxLength = 32767;
             this.skinTextBox2.MinimumSize = new System.Drawing.Size(28, 28);
@@ -371,9 +372,9 @@
             this.skinTextBox2.Name = "skinTextBox2";
             this.skinTextBox2.NormlBack = null;
             this.skinTextBox2.Padding = new System.Windows.Forms.Padding(5);
-            this.skinTextBox2.ReadOnly = true;
+            this.skinTextBox2.ReadOnly = false;
             this.skinTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.skinTextBox2.Size = new System.Drawing.Size(606, 358);
+            this.skinTextBox2.Size = new System.Drawing.Size(316, 167);
             // 
             // 
             // 
@@ -383,17 +384,27 @@
             this.skinTextBox2.SkinTxt.Location = new System.Drawing.Point(5, 5);
             this.skinTextBox2.SkinTxt.Multiline = true;
             this.skinTextBox2.SkinTxt.Name = "BaseText";
-            this.skinTextBox2.SkinTxt.Size = new System.Drawing.Size(581, 335);
+            this.skinTextBox2.SkinTxt.Size = new System.Drawing.Size(306, 157);
             this.skinTextBox2.SkinTxt.TabIndex = 0;
-            this.skinTextBox2.SkinTxt.Text = "skinTextBox2";
+            this.skinTextBox2.SkinTxt.Text = "<br/>skinTextBox2";
             this.skinTextBox2.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.skinTextBox2.SkinTxt.WaterText = "";
             this.skinTextBox2.TabIndex = 1;
-            this.skinTextBox2.Text = "skinTextBox2";
+            this.skinTextBox2.Text = "<br/>skinTextBox2";
             this.skinTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.skinTextBox2.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.skinTextBox2.WaterText = "";
             this.skinTextBox2.WordWrap = true;
+            // 
+            // rtfRichTextBox1
+            // 
+            this.rtfRichTextBox1.HiglightColor = CCWin.SkinControl.RtfRichTextBox.RtfColor.White;
+            this.rtfRichTextBox1.Location = new System.Drawing.Point(46, 41);
+            this.rtfRichTextBox1.Name = "rtfRichTextBox1";
+            this.rtfRichTextBox1.Size = new System.Drawing.Size(267, 54);
+            this.rtfRichTextBox1.TabIndex = 2;
+            this.rtfRichTextBox1.Text = "<br/>adbd";
+            this.rtfRichTextBox1.TextColor = CCWin.SkinControl.RtfRichTextBox.RtfColor.Black;
             // 
             // FrmMain
             // 
@@ -432,8 +443,9 @@
         private CCWin.SkinControl.SkinTabPage skinTabPage4;
         private CCWin.SkinControl.SkinTabPage skinTabPage5;
         private System.Windows.Forms.Panel panel2;
-        private CCWin.SkinControl.SkinTextBox skinTextBox2;
         private CCWin.SkinControl.SkinToolStrip skinToolStrip1;
+        private CCWin.SkinControl.SkinTextBox skinTextBox2;
+        private CCWin.SkinControl.RtfRichTextBox rtfRichTextBox1;
     }
 }
 
