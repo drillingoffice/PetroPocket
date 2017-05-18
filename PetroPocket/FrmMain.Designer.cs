@@ -32,18 +32,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.skinButton1 = new CCWin.SkinControl.SkinButton();
-            this.skinButton2 = new CCWin.SkinControl.SkinButton();
-            this.skinTextBox1 = new CCWin.SkinControl.SkinTextBox();
-            this.skinButton3 = new CCWin.SkinControl.SkinButton();
             this.skinTabControl1 = new CCWin.SkinControl.SkinTabControl();
             this.skinTabPage1 = new CCWin.SkinControl.SkinTabPage();
+            this.skinListBox1 = new CCWin.SkinControl.SkinListBox();
             this.skinTabPage2 = new CCWin.SkinControl.SkinTabPage();
+            this.skinTabPage3 = new CCWin.SkinControl.SkinTabPage();
+            this.skinTabPage4 = new CCWin.SkinControl.SkinTabPage();
+            this.skinTabPage5 = new CCWin.SkinControl.SkinTabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.skinTextBox1 = new CCWin.SkinControl.SkinTextBox();
+            this.skinButton3 = new CCWin.SkinControl.SkinButton();
+            this.skinButton2 = new CCWin.SkinControl.SkinButton();
+            this.skinButton1 = new CCWin.SkinControl.SkinButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.skinToolStrip1 = new CCWin.SkinControl.SkinToolStrip();
+            this.skinTextBox2 = new CCWin.SkinControl.SkinTextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.skinTabControl1.SuspendLayout();
+            this.skinTabPage1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -68,6 +77,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 200F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.skinTabControl1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 38);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -76,6 +86,112 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(854, 425);
             this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
+            // 
+            // skinTabControl1
+            // 
+            this.skinTabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.skinTabControl1.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
+            this.skinTabControl1.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
+            this.skinTabControl1.Controls.Add(this.skinTabPage1);
+            this.skinTabControl1.Controls.Add(this.skinTabPage2);
+            this.skinTabControl1.Controls.Add(this.skinTabPage3);
+            this.skinTabControl1.Controls.Add(this.skinTabPage4);
+            this.skinTabControl1.Controls.Add(this.skinTabPage5);
+            this.skinTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabControl1.DrawType = CCWin.SkinControl.DrawStyle.Draw;
+            this.skinTabControl1.HeadBack = null;
+            this.skinTabControl1.ImgTxtOffset = new System.Drawing.Point(0, 0);
+            this.skinTabControl1.ItemSize = new System.Drawing.Size(36, 36);
+            this.skinTabControl1.Location = new System.Drawing.Point(3, 3);
+            this.skinTabControl1.Multiline = true;
+            this.skinTabControl1.Name = "skinTabControl1";
+            this.skinTabControl1.PageArrowDown = null;
+            this.skinTabControl1.PageArrowHover = null;
+            this.skinTabControl1.PageBaseColor = System.Drawing.Color.LightCyan;
+            this.skinTabControl1.PageCloseHover = null;
+            this.skinTabControl1.PageCloseNormal = null;
+            this.skinTabControl1.PageDown = null;
+            this.skinTabControl1.PageHover = null;
+            this.skinTabControl1.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
+            this.skinTabControl1.PageNorml = null;
+            this.skinTabControl1.PagePalace = true;
+            this.skinTabControl1.SelectedIndex = 0;
+            this.skinTabControl1.Size = new System.Drawing.Size(194, 419);
+            this.skinTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.skinTabControl1.TabIndex = 0;
+            // 
+            // skinTabPage1
+            // 
+            this.skinTabPage1.BackColor = System.Drawing.Color.White;
+            this.skinTabPage1.Controls.Add(this.skinListBox1);
+            this.skinTabPage1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage1.Location = new System.Drawing.Point(36, 0);
+            this.skinTabPage1.Name = "skinTabPage1";
+            this.skinTabPage1.Size = new System.Drawing.Size(158, 419);
+            this.skinTabPage1.TabIndex = 0;
+            this.skinTabPage1.TabItemImage = null;
+            this.skinTabPage1.Text = "中";
+            // 
+            // skinListBox1
+            // 
+            this.skinListBox1.Back = null;
+            this.skinListBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinListBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.skinListBox1.Font = new System.Drawing.Font("Times New Roman", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.skinListBox1.FormattingEnabled = true;
+            this.skinListBox1.ItemHeight = 20;
+            this.skinListBox1.Location = new System.Drawing.Point(0, 0);
+            this.skinListBox1.Margin = new System.Windows.Forms.Padding(5);
+            this.skinListBox1.MouseColor = System.Drawing.Color.LightSteelBlue;
+            this.skinListBox1.Name = "skinListBox1";
+            this.skinListBox1.RowBackColor2 = System.Drawing.Color.White;
+            this.skinListBox1.Size = new System.Drawing.Size(158, 419);
+            this.skinListBox1.TabIndex = 0;
+            // 
+            // skinTabPage2
+            // 
+            this.skinTabPage2.BackColor = System.Drawing.Color.White;
+            this.skinTabPage2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage2.Location = new System.Drawing.Point(36, 0);
+            this.skinTabPage2.Name = "skinTabPage2";
+            this.skinTabPage2.Size = new System.Drawing.Size(158, 419);
+            this.skinTabPage2.TabIndex = 1;
+            this.skinTabPage2.TabItemImage = null;
+            this.skinTabPage2.Text = "英";
+            // 
+            // skinTabPage3
+            // 
+            this.skinTabPage3.BackColor = System.Drawing.Color.White;
+            this.skinTabPage3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage3.Location = new System.Drawing.Point(36, 0);
+            this.skinTabPage3.Name = "skinTabPage3";
+            this.skinTabPage3.Size = new System.Drawing.Size(158, 419);
+            this.skinTabPage3.TabIndex = 2;
+            this.skinTabPage3.TabItemImage = null;
+            this.skinTabPage3.Text = "法";
+            // 
+            // skinTabPage4
+            // 
+            this.skinTabPage4.BackColor = System.Drawing.Color.White;
+            this.skinTabPage4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage4.Location = new System.Drawing.Point(36, 0);
+            this.skinTabPage4.Name = "skinTabPage4";
+            this.skinTabPage4.Size = new System.Drawing.Size(158, 419);
+            this.skinTabPage4.TabIndex = 3;
+            this.skinTabPage4.TabItemImage = null;
+            this.skinTabPage4.Text = "德";
+            // 
+            // skinTabPage5
+            // 
+            this.skinTabPage5.BackColor = System.Drawing.Color.White;
+            this.skinTabPage5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTabPage5.Location = new System.Drawing.Point(36, 0);
+            this.skinTabPage5.Name = "skinTabPage5";
+            this.skinTabPage5.Size = new System.Drawing.Size(158, 419);
+            this.skinTabPage5.TabIndex = 4;
+            this.skinTabPage5.TabItemImage = null;
+            this.skinTabPage5.Text = "俄";
             // 
             // panel1
             // 
@@ -88,34 +204,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(854, 29);
             this.panel1.TabIndex = 1;
-            // 
-            // skinButton1
-            // 
-            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton1.DownBack = null;
-            this.skinButton1.Location = new System.Drawing.Point(32, 4);
-            this.skinButton1.MouseBack = null;
-            this.skinButton1.Name = "skinButton1";
-            this.skinButton1.NormlBack = null;
-            this.skinButton1.Size = new System.Drawing.Size(30, 23);
-            this.skinButton1.TabIndex = 0;
-            this.skinButton1.Text = "skinButton1";
-            this.skinButton1.UseVisualStyleBackColor = false;
-            // 
-            // skinButton2
-            // 
-            this.skinButton2.BackColor = System.Drawing.Color.Transparent;
-            this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.skinButton2.DownBack = null;
-            this.skinButton2.Location = new System.Drawing.Point(68, 4);
-            this.skinButton2.MouseBack = null;
-            this.skinButton2.Name = "skinButton2";
-            this.skinButton2.NormlBack = null;
-            this.skinButton2.Size = new System.Drawing.Size(30, 23);
-            this.skinButton2.TabIndex = 0;
-            this.skinButton2.Text = "skinButton1";
-            this.skinButton2.UseVisualStyleBackColor = false;
             // 
             // skinTextBox1
             // 
@@ -175,55 +263,137 @@
             this.skinButton3.Text = "skinButton1";
             this.skinButton3.UseVisualStyleBackColor = false;
             // 
-            // skinTabControl1
+            // skinButton2
             // 
-            this.skinTabControl1.Alignment = System.Windows.Forms.TabAlignment.Left;
-            this.skinTabControl1.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
-            this.skinTabControl1.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
-            this.skinTabControl1.Controls.Add(this.skinTabPage1);
-            this.skinTabControl1.Controls.Add(this.skinTabPage2);
-            this.skinTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabControl1.HeadBack = null;
-            this.skinTabControl1.ImgTxtOffset = new System.Drawing.Point(0, 0);
-            this.skinTabControl1.ItemSize = new System.Drawing.Size(70, 36);
-            this.skinTabControl1.Location = new System.Drawing.Point(3, 3);
-            this.skinTabControl1.Multiline = true;
-            this.skinTabControl1.Name = "skinTabControl1";
-            this.skinTabControl1.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("skinTabControl1.PageArrowDown")));
-            this.skinTabControl1.PageArrowHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl1.PageArrowHover")));
-            this.skinTabControl1.PageCloseHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl1.PageCloseHover")));
-            this.skinTabControl1.PageCloseNormal = ((System.Drawing.Image)(resources.GetObject("skinTabControl1.PageCloseNormal")));
-            this.skinTabControl1.PageDown = ((System.Drawing.Image)(resources.GetObject("skinTabControl1.PageDown")));
-            this.skinTabControl1.PageHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl1.PageHover")));
-            this.skinTabControl1.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Left;
-            this.skinTabControl1.PageNorml = null;
-            this.skinTabControl1.PagePalace = true;
-            this.skinTabControl1.SelectedIndex = 0;
-            this.skinTabControl1.Size = new System.Drawing.Size(194, 419);
-            this.skinTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.skinTabControl1.TabIndex = 0;
+            this.skinButton2.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton2.DownBack = null;
+            this.skinButton2.Location = new System.Drawing.Point(68, 4);
+            this.skinButton2.MouseBack = null;
+            this.skinButton2.Name = "skinButton2";
+            this.skinButton2.NormlBack = null;
+            this.skinButton2.Size = new System.Drawing.Size(30, 23);
+            this.skinButton2.TabIndex = 0;
+            this.skinButton2.Text = "skinButton1";
+            this.skinButton2.UseVisualStyleBackColor = false;
             // 
-            // skinTabPage1
+            // skinButton1
             // 
-            this.skinTabPage1.BackColor = System.Drawing.Color.White;
-            this.skinTabPage1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage1.Location = new System.Drawing.Point(36, 0);
-            this.skinTabPage1.Name = "skinTabPage1";
-            this.skinTabPage1.Size = new System.Drawing.Size(158, 419);
-            this.skinTabPage1.TabIndex = 0;
-            this.skinTabPage1.TabItemImage = null;
-            this.skinTabPage1.Text = "page111";
+            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton1.DownBack = null;
+            this.skinButton1.Location = new System.Drawing.Point(32, 4);
+            this.skinButton1.MouseBack = null;
+            this.skinButton1.Name = "skinButton1";
+            this.skinButton1.NormlBack = null;
+            this.skinButton1.Size = new System.Drawing.Size(30, 23);
+            this.skinButton1.TabIndex = 0;
+            this.skinButton1.Text = "skinButton1";
+            this.skinButton1.UseVisualStyleBackColor = false;
             // 
-            // skinTabPage2
+            // panel2
             // 
-            this.skinTabPage2.BackColor = System.Drawing.Color.White;
-            this.skinTabPage2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinTabPage2.Location = new System.Drawing.Point(36, 0);
-            this.skinTabPage2.Name = "skinTabPage2";
-            this.skinTabPage2.Size = new System.Drawing.Size(158, 419);
-            this.skinTabPage2.TabIndex = 1;
-            this.skinTabPage2.TabItemImage = null;
-            this.skinTabPage2.Text = "page2";
+            this.panel2.Controls.Add(this.skinTextBox2);
+            this.panel2.Controls.Add(this.skinToolStrip1);
+            this.panel2.Location = new System.Drawing.Point(203, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(606, 383);
+            this.panel2.TabIndex = 1;
+            // 
+            // skinToolStrip1
+            // 
+            this.skinToolStrip1.Arrow = System.Drawing.Color.Black;
+            this.skinToolStrip1.Back = System.Drawing.Color.White;
+            this.skinToolStrip1.BackRadius = 4;
+            this.skinToolStrip1.BackRectangle = new System.Drawing.Rectangle(10, 10, 10, 10);
+            this.skinToolStrip1.Base = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(200)))), ((int)(((byte)(254)))));
+            this.skinToolStrip1.BaseFore = System.Drawing.Color.Black;
+            this.skinToolStrip1.BaseForeAnamorphosis = false;
+            this.skinToolStrip1.BaseForeAnamorphosisBorder = 4;
+            this.skinToolStrip1.BaseForeAnamorphosisColor = System.Drawing.Color.White;
+            this.skinToolStrip1.BaseForeOffset = new System.Drawing.Point(0, 0);
+            this.skinToolStrip1.BaseHoverFore = System.Drawing.Color.White;
+            this.skinToolStrip1.BaseItemAnamorphosis = true;
+            this.skinToolStrip1.BaseItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.BaseItemBorderShow = true;
+            this.skinToolStrip1.BaseItemDown = ((System.Drawing.Image)(resources.GetObject("skinToolStrip1.BaseItemDown")));
+            this.skinToolStrip1.BaseItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.BaseItemMouse = ((System.Drawing.Image)(resources.GetObject("skinToolStrip1.BaseItemMouse")));
+            this.skinToolStrip1.BaseItemNorml = null;
+            this.skinToolStrip1.BaseItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.BaseItemRadius = 4;
+            this.skinToolStrip1.BaseItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinToolStrip1.BaseItemSplitter = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.BindTabControl = null;
+            this.skinToolStrip1.DropDownImageSeparator = System.Drawing.Color.FromArgb(((int)(((byte)(197)))), ((int)(((byte)(197)))), ((int)(((byte)(197)))));
+            this.skinToolStrip1.Fore = System.Drawing.Color.Black;
+            this.skinToolStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 4, 2);
+            this.skinToolStrip1.HoverFore = System.Drawing.Color.White;
+            this.skinToolStrip1.ItemAnamorphosis = true;
+            this.skinToolStrip1.ItemBorder = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.ItemBorderShow = true;
+            this.skinToolStrip1.ItemHover = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.ItemPressed = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(148)))), ((int)(((byte)(212)))));
+            this.skinToolStrip1.ItemRadius = 4;
+            this.skinToolStrip1.ItemRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinToolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.skinToolStrip1.Name = "skinToolStrip1";
+            this.skinToolStrip1.RadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinToolStrip1.Size = new System.Drawing.Size(606, 25);
+            this.skinToolStrip1.SkinAllColor = true;
+            this.skinToolStrip1.TabIndex = 0;
+            this.skinToolStrip1.Text = "skinToolStrip1";
+            this.skinToolStrip1.TitleAnamorphosis = true;
+            this.skinToolStrip1.TitleColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(228)))), ((int)(((byte)(236)))));
+            this.skinToolStrip1.TitleRadius = 4;
+            this.skinToolStrip1.TitleRadiusStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // skinTextBox2
+            // 
+            this.skinTextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.skinTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTextBox2.DownBack = null;
+            this.skinTextBox2.Icon = null;
+            this.skinTextBox2.IconIsButton = false;
+            this.skinTextBox2.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.skinTextBox2.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.skinTextBox2.IsPasswordChat = '\0';
+            this.skinTextBox2.IsSystemPasswordChar = false;
+            this.skinTextBox2.Lines = new string[] {
+        "skinTextBox2"};
+            this.skinTextBox2.Location = new System.Drawing.Point(0, 25);
+            this.skinTextBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.skinTextBox2.MaxLength = 32767;
+            this.skinTextBox2.MinimumSize = new System.Drawing.Size(28, 28);
+            this.skinTextBox2.MouseBack = null;
+            this.skinTextBox2.MouseState = CCWin.SkinClass.ControlState.Normal;
+            this.skinTextBox2.Multiline = true;
+            this.skinTextBox2.Name = "skinTextBox2";
+            this.skinTextBox2.NormlBack = null;
+            this.skinTextBox2.Padding = new System.Windows.Forms.Padding(5);
+            this.skinTextBox2.ReadOnly = true;
+            this.skinTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.skinTextBox2.Size = new System.Drawing.Size(606, 358);
+            // 
+            // 
+            // 
+            this.skinTextBox2.SkinTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.skinTextBox2.SkinTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinTextBox2.SkinTxt.Font = new System.Drawing.Font("微软雅黑", 9.75F);
+            this.skinTextBox2.SkinTxt.Location = new System.Drawing.Point(5, 5);
+            this.skinTextBox2.SkinTxt.Multiline = true;
+            this.skinTextBox2.SkinTxt.Name = "BaseText";
+            this.skinTextBox2.SkinTxt.Size = new System.Drawing.Size(581, 335);
+            this.skinTextBox2.SkinTxt.TabIndex = 0;
+            this.skinTextBox2.SkinTxt.Text = "skinTextBox2";
+            this.skinTextBox2.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.skinTextBox2.SkinTxt.WaterText = "";
+            this.skinTextBox2.TabIndex = 1;
+            this.skinTextBox2.Text = "skinTextBox2";
+            this.skinTextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.skinTextBox2.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
+            this.skinTextBox2.WaterText = "";
+            this.skinTextBox2.WordWrap = true;
             // 
             // FrmMain
             // 
@@ -236,8 +406,11 @@
             this.Text = "石油字典";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
             this.skinTabControl1.ResumeLayout(false);
+            this.skinTabPage1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -253,7 +426,14 @@
         private CCWin.SkinControl.SkinButton skinButton3;
         private CCWin.SkinControl.SkinButton skinButton2;
         private CCWin.SkinControl.SkinButton skinButton1;
+        private CCWin.SkinControl.SkinListBox skinListBox1;
         private CCWin.SkinControl.SkinTabPage skinTabPage2;
+        private CCWin.SkinControl.SkinTabPage skinTabPage3;
+        private CCWin.SkinControl.SkinTabPage skinTabPage4;
+        private CCWin.SkinControl.SkinTabPage skinTabPage5;
+        private System.Windows.Forms.Panel panel2;
+        private CCWin.SkinControl.SkinTextBox skinTextBox2;
+        private CCWin.SkinControl.SkinToolStrip skinToolStrip1;
     }
 }
 
